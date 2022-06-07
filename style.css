@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.neoguias.com/git/#Crear_un_repositorio_de_git -->
+<html lang="es" prefix="og: https://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Neoguias - Sistemas, Aplicaciones, Dispositivos y Programación a Todos los Niveles">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.neoguias.com/xmlrpc.php">
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.neoguias.com/images/icon/iapple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.neoguias.com/images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.neoguias.com/images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.neoguias.com/images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.neoguias.com/images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.neoguias.com/images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.neoguias.com/images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.neoguias.com/images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.neoguias.com/images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.neoguias.com/images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.neoguias.com/images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.neoguias.com/images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.neoguias.com/images/icon/favicon-16x16.png">
+<link rel="manifest" href="https://www.neoguias.com/images/icon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link media="all" href="./style_files/autoptimize_ce60869b55c9106d8e32ed8f11f6dcca.css" rel="stylesheet"><title>Tutorial de Introducción a Git | Neoguias</title>
+
+<meta name="description" content="Git es una herramienta muy útil a la hora de gestionar el código de los proyectos en los que trabajas. No es fácil para los principiantes, especialmente si nunca has trabajado como parte de un equipo. Si siempre has trabajado solo y quieres aprender a utilizar Git en cuestión de minutos, este tutorial es para">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.neoguias.com/git/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Neoguias | Sistemas, Aplicaciones, Dispositivos y Programación a Todos los Niveles">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tutorial de Introducción a Git | Neoguias">
+<meta property="og:description" content="Git es una herramienta muy útil a la hora de gestionar el código de los proyectos en los que trabajas. No es fácil para los principiantes, especialmente si nunca has trabajado como parte de un equipo. Si siempre has trabajado solo y quieres aprender a utilizar Git en cuestión de minutos, este tutorial es para">
+<meta property="og:url" content="https://www.neoguias.com/git/">
+<meta property="og:image" content="https://www.neoguias.com/wp-content/uploads/2020/12/git.png">
+<meta property="og:image:secure_url" content="https://www.neoguias.com/wp-content/uploads/2020/12/git.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2020-05-14T03:12:45+00:00">
+<meta property="article:modified_time" content="2020-12-06T19:02:33+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tutorial de Introducción a Git | Neoguias">
+<meta name="twitter:description" content="Git es una herramienta muy útil a la hora de gestionar el código de los proyectos en los que trabajas. No es fácil para los principiantes, especialmente si nunca has trabajado como parte de un equipo. Si siempre has trabajado solo y quieres aprender a utilizar Git en cuestión de minutos, este tutorial es para">
+<meta name="twitter:image" content="https://www.neoguias.com/wp-content/uploads/2020/12/git.png">
+<meta name="google" content="nositelinkssearchbox">
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://c0.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="Neoguias » Feed" href="https://www.neoguias.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Neoguias » Feed de los comentarios" href="https://www.neoguias.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Neoguias » Comentario Tutorial de Introducción a Git del feed" href="https://www.neoguias.com/git/feed/">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="https://api.w.org/" href="https://www.neoguias.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.neoguias.com/wp-json/wp/v2/posts/17359"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.neoguias.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.neoguias.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="shortlink" href="https://wp.me/s9rKhj-git">
+<link rel="alternate" type="application/json+oembed" href="https://www.neoguias.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.neoguias.com%2Fgit%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.neoguias.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.neoguias.com%2Fgit%2F&amp;format=xml">
+<style type="text/css">div#toc_container {width: 100%;}div#toc_container ul li {font-size: 100%;}</style><style type="text/css">img#wpstats{display:none}</style>
+<script src="./style_files/f.txt"></script><script src="./style_files/f(1).txt"></script><script src="./style_files/f(2).txt" id="google_shimpl"></script><script defer="" src="./style_files/f(3).txt"></script>
+<script defer="">
+		window.onload = function(){
+			[].forEach.call(document.getElementsByClassName('adsbygoogle'), function () {
+				adsbygoogle.push({})
+			})
+		}
+	</script>
+<meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./style_files/f(4).txt" as="script"><script type="text/javascript" src="./style_files/f(4).txt"></script><link rel="preload" href="./style_files/f(5).txt" as="script"><script type="text/javascript" src="./style_files/f(5).txt"></script><link rel="preload" href="./style_files/f(4).txt" as="script"><script type="text/javascript" src="./style_files/f(4).txt"></script><link rel="preload" href="./style_files/f(5).txt" as="script"><script type="text/javascript" src="./style_files/f(5).txt"></script></head>
+<body class="post-template-default single single-post postid-17359 single-format-standard group-blog" aria-hidden="false" style="padding: 10px 0px 0px;">
+<div class="hfeed site" id="page" style="height: auto !important;">
+<div id="top-banner">
+Ya está disponible el framework MVC para WordPress! <a href="https://sciwp.com/" target="_blank" class="main">Puedes echarle un ojo aquí!</a>
+</div>
+<nav id="top-nav" class="navbar navbar-expand-lg">
+<a class="top-nav-logo" href="https://www.neoguias.com/">neoguias.com</a>
+<div id="headernavbar-right" class="foat-right">
+<a id="headernavbar_search_icon" onclick="click_headernavbar_search_icon()" class="max-991">
+<i class="fa fa-search" aria-hidden="true"></i>
+</a>
+<button id="neo_main_menu_button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+<div id="neo_main_menu" class="collapse navbar-collapse flex-grow-0">
+<ul class="navbar-nav">
+<li class="nav-item active">
+<a href="https://www.neoguias.com/"><i class="fa fa-home" style="margin-right: 4px;"></i>Inicio</a>
+</li>
+<li class="nav-item">
+<a href="https://www.neoguias.com/tutoriales"><i class="fa fa-book" style="margin-right: 4px;"></i>Tutoriales</a>
+</li>
+<li class="nav-item">
+<a href="https://www.neoguias.com/guias"><i class="fa fa-leanpub" style="margin-right: 4px;"></i>Guías</a>
+</li>
+<li class="nav-item">
+<a href="https://www.neoguias.com/introducciones"><i class="fa fa-rocket" style="margin-right: 4px;"></i>Introducciones</a>
+</li>
+<li class="nav-item">
+<a href="https://www.neoguias.com/taller"><i class="fa fa-code" style="margin-right: 4px;"></i>Taller</a>
+</li>
+</ul>
+</div>
+<form id="top-nav-search-form" method="get" action="https://www.neoguias.com/" role="search" class="foat-right">
+<div class="input-group">
+<input class="field form-control" name="s" type="text" placeholder="Buscar …" value="">
+<span class="input-group-btn">
+<input class="submit btn btn-primary" name="submit" type="submit" value="Buscar">
+</span>
+</div>
+</form>
+</nav>
+<div id="sub-nav">
+<li class="nav-item active">
+<a href="https://www.neoguias.com/tutorial-vue">Introducción a Vue</a>
+</li>
+</div>
+<div class="wrapper" id="single-wrapper" style="height: auto !important;">
+<div class="container-fluid" id="content" tabindex="-1" style="height: auto !important;">
+<div class="row">
+<div class="col-md-12">
+<header class="entry-header">
+<noscript><img alt='' src='https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=75&#038;r=g' srcset='https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=150&#038;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /></noscript><img alt="" src="./style_files/a97a54103b934b14ca1794702ddae86c.png" data-src="https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=75&amp;r=g" data-srcset="https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=150&amp;r=g 2x" class="avatar avatar-75 photo lazyloaded" height="75" width="75" srcset="https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=150&amp;r=g 2x"> <h1 class="entry-title">Tutorial de Introducción a Git</h1> <div class="entry-header-container">
+<div class="entry-meta">
+<span class="posted-on">Publicado el <time class="updated" datetime="2020-12-06T20:02:33+01:00"> 6 diciembre, 2020 </time><span class="byline"> por <span class="author vcard">Edu Lázaro</span> | <a href="https://twitter.com/neeonez">@neeonez</a></span> </span></div>
+<div class="entry-header-tags tags">
+<a href="https://www.neoguias.com/tutoriales/git/" style="background:#f7f7f7; color: #e84d31 !important;">Git</a> </div>
+</div>
+</header>
+</div>
+</div>
+<div class="row" style="height: auto !important;">
+<div id="left-bar">
+<div class="neo-widget menu-widget"><h4>📚 Tutoriales</h4><ul class="menu level-1"><li class=""><a href="https://www.neoguias.com/tutoriales/aplicaciones/"><i class="fa fa-folder-o"></i> &nbsp;Aplicaciones</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/bases-de-datos/"><i class="fa fa-folder-o"></i> &nbsp;Bases de datos</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/dispositivos/"><i class="fa fa-folder-o"></i> &nbsp;Dispositivos</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/hardware/"><i class="fa fa-folder-o"></i> &nbsp;Hardware</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/inversion/"><i class="fa fa-folder-o"></i> &nbsp;Inversión</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/marketing/"><i class="fa fa-folder-o"></i> &nbsp;Marketing</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/programacion/"><i class="fa fa-folder-o"></i> &nbsp;Programacion</a></li><li class=""><a href="https://www.neoguias.com/tutoriales/sistemas/"><i class="fa fa-folder-o"></i> &nbsp;Sistemas</a></li></ul></div> <div class="neo-widget follow-widget">
+<h4>💘 Seguir</h4>
+<ul>
+<li>
+<a href="https://twitter.com/neoguiascom"><i class="fa fa-twitter"></i> &nbsp;Seguir en Twitter!</a>
+</li>
+<li>
+<a href="https://facebook.com/neoguiascom"><i class="fa fa-facebook"></i> &nbsp;Seguir en Facebook!</a>
+</li>
+<li>
+<a href="https://github.com/neoguias"><i class="fa fa-github"></i> &nbsp;Seguir en GitHub!</a>
+</li>
+</ul>
+</div>
+<div class="neo-widget post-tags-widget">
+<h4>🏷️ Etiquetas</h4>
+<ul class="menu"><li><a href="https://www.neoguias.com/tutoriales/git/"><i class="fa fa-link"></i> &nbsp;Git</a></li></ul> </div>
+</div>
+<div class="content-area" id="primary">
+<main class="site-main" id="main">
+<article class="post-17359 post type-post status-publish format-standard has-post-thumbnail hentry category-introducciones category-tutoriales tutoriales-aplicaciones tutoriales-git tutoriales-aplicaciones-tipo" id="post-17359">
+<div class="entry-content">
+<p>Git es una herramienta muy útil a la hora de gestionar el código de los proyectos en los que trabajas. No es fácil para los principiantes, especialmente si nunca has trabajado como parte de un equipo. Si siempre has trabajado solo y quieres aprender a utilizar Git en cuestión de minutos, este tutorial es para ti.</p>
+<div id="toc_container" class="no_bullets"><p class="toc_title">Contenidos</p><ul class="toc_list"><li><a href="https://www.neoguias.com/git/#Introduccion"><span class="toc_number toc_depth_1">1</span> Introducción</a></li><li><a href="https://www.neoguias.com/git/#Que_es_Git"><span class="toc_number toc_depth_1">2</span> Qué es Git</a></li><li><a href="https://www.neoguias.com/git/#Como_funciona_Git"><span class="toc_number toc_depth_1">3</span> Cómo funciona Git</a></li><li><a href="https://www.neoguias.com/git/#Instalacion_de_Git"><span class="toc_number toc_depth_1">4</span> Instalación de Git</a><ul><li><a href="https://www.neoguias.com/git/#Instalacion_de_Git_en_Windows"><span class="toc_number toc_depth_2">4.1</span> Instalación de Git en Windows</a></li><li><a href="https://www.neoguias.com/git/#Instalacion_de_Git_en_Linux"><span class="toc_number toc_depth_2">4.2</span> Instalación de Git en Linux</a></li><li><a href="https://www.neoguias.com/git/#Instalacion_de_Git_en_Mac"><span class="toc_number toc_depth_2">4.3</span> Instalación de Git en Mac</a></li></ul></li><li><a href="https://www.neoguias.com/git/#Comandos_Basicos_de_Git"><span class="toc_number toc_depth_1">5</span> Comandos Básicos de Git</a></li><li><a href="https://www.neoguias.com/git/#Crea_un_Repositorio_de_Git"><span class="toc_number toc_depth_1">6</span> Crea un Repositorio de Git</a></li><li><a href="https://www.neoguias.com/git/#Crea_un_Proyecto_Local"><span class="toc_number toc_depth_1">7</span> Crea un Proyecto Local</a></li><li><a href="https://www.neoguias.com/git/#Agrega_Archivos_al_Proyecto"><span class="toc_number toc_depth_1">8</span> Agrega Archivos al Proyecto</a><ul><li><a href="https://www.neoguias.com/git/#Add_Anade_los_Archivos_al_Repositorio"><span class="toc_number toc_depth_2">8.1</span> Add: Añade los Archivos al Repositorio</a></li><li><a href="https://www.neoguias.com/git/#Commit_Guarda_los_Cambios_en_el_Repositorio"><span class="toc_number toc_depth_2">8.2</span> Commit: Guarda los Cambios en el Repositorio</a></li><li><a href="https://www.neoguias.com/git/#Stash_Deshaz_los_Cambios_no_Guardados"><span class="toc_number toc_depth_2">8.3</span> Stash: Deshaz los Cambios no Guardados</a></li><li><a href="https://www.neoguias.com/git/#Push_Sube_el_Codigo_al_Repositorio_Remoto"><span class="toc_number toc_depth_2">8.4</span> Push: Sube el Código al Repositorio Remoto</a></li><li><a href="https://www.neoguias.com/git/#Pull_Actualiza_el_Repositorio_Remoto"><span class="toc_number toc_depth_2">8.5</span> Pull: Actualiza el Repositorio Remoto</a></li></ul></li><li><a href="https://www.neoguias.com/git/#Crea_un_Repositorio_en_tu_Servidor"><span class="toc_number toc_depth_1">9</span> Crea un Repositorio en tu Servidor</a></li><li><a href="https://www.neoguias.com/git/#Que_son_las_Ramas_y_como_Crearlas"><span class="toc_number toc_depth_1">10</span> Qué son las Ramas y cómo Crearlas</a><ul><li><a href="https://www.neoguias.com/git/#Branch_Trabajando_con_Ramas"><span class="toc_number toc_depth_2">10.1</span> Branch: Trabajando con Ramas</a></li><li><a href="https://www.neoguias.com/git/#Checkout_Cambia_o_Crea_Ramas"><span class="toc_number toc_depth_2">10.2</span> Checkout: Cambia o Crea Ramas</a></li><li><a href="https://www.neoguias.com/git/#Diff_Visualiza_Diferencias_entre_Ramas"><span class="toc_number toc_depth_2">10.3</span> Diff: Visualiza Diferencias entre Ramas</a></li></ul></li><li><a href="https://www.neoguias.com/git/#Merge_Integrando_Ramas_y_Funcionalidades"><span class="toc_number toc_depth_1">11</span> Merge: Integrando Ramas y Funcionalidades</a></li><li><a href="https://www.neoguias.com/git/#Resolucion_de_Conflictos"><span class="toc_number toc_depth_1">12</span> Resolución de Conflictos</a><ul><li><a href="https://www.neoguias.com/git/#Como_Deshacer_un_Merge"><span class="toc_number toc_depth_2">12.1</span> Cómo Deshacer un Merge</a></li><li><a href="https://www.neoguias.com/git/#Como_Deshacer_un_Commit"><span class="toc_number toc_depth_2">12.2</span> Cómo Deshacer un Commit</a></li></ul></li><li><a href="https://www.neoguias.com/git/#Ayuda_de_Git"><span class="toc_number toc_depth_1">13</span> Ayuda de Git</a></li></ul></div>
+<h2><span id="Introduccion">Introducción</span></h2>
+<p>En esta guía aprenderás qué es Git y por qué puede resultarte útil tanto si trabajas solo como si formas parte de un equipo. El único requisito previo es que sepas crear un proyecto web de cualquier tipo y que lo hayas subido alguna vez a alguna cuenta de hosting o a algún servidor. También necesitarás ciertos conocimientos básicos de la <strong>línea de comandos</strong>. Si no los tienes, consulta <a href="https://www.neoguias.com/linea-de-comandos/">qué es y cómo se utiliza la línea de comandos</a>.</p>
+<p>Seguidamente, crearemos un proyecto local y lo subiremos a un servidor utilizando Git desde la línea de comandos. Cierto es que existen herramientas visuales que te permitirán usar Git con mayor facilidad, pero es casi indispensable que aprendas ciertos comandos básicos y no tan básicos, puesto que a la hora de la verdad, los necesitarás. Para que veáis que no miento, en la mayor parte de las empresas en las que he trabajado era <strong>indispensable</strong> el uso de <strong>Git</strong> desde la <strong>línea de comandos</strong>.</p>
+<p>Estos son los <strong>requisitos</strong> de este tutorial:</p>
+<ul>
+<li>Que tengas soltura en el uso de la línea de comandos.</li>
+<li>Que sepas crear un proyecto web.</li>
+</ul>
+<p>Estos son los <strong>objetivos</strong> de este tutorial:</p>
+<ul>
+<li>Aprender qué es Git y que comiences a utilizarlo desde ya.</li>
+<li>Que aprendas a crear un proyecto local integrado con Git y que lo pongas a funcionar en un servidor usando esta herramienta.</li>
+</ul>
+<h2><span id="Que_es_Git">Qué es Git</span></h2>
+<p>Git es un sistema de control de versiones que se utiliza para gestionar el código. Se utiliza para registrar los cambios de las diferentes revisiones del código y así permitir que tanto un desarrollador individual como un equipo puedan trabajar juntos en un proyecto. Para ello Git pone a disposición de los equipos las ramas o branches, que permiten trabajar en diversas funcionalidades a los miembros de un equipo.</p>
+<p>A los sistemas de control de versiones también se les llama <strong>VCS «Version Control System»</strong>. Si quieres conoces algo más acerca de la historia de Git, puedes consultar <a href="https://es.wikipedia.org/wiki/Git" target="_blank" rel="nofollow">este enlace</a>.</p>
+<h2><span id="Como_funciona_Git">Cómo funciona Git</span></h2>
+<p>Si estás leyendo esto es porque seguramente estés acostumbrado a utilizar el protocolo <strong>FTP (File Transfer Protocol)</strong> para subir a tu servidor los archivos de tus proyectos. Para ello, seguramente habrás utilizado aplicaciones como Transmit, WinFTP o <a href="https://www.neoguias.com/instalar-filezilla/">FileZilla</a>.</p>
+<ul>
+<li>Cuando utilizas el protocolo <strong>FTP</strong>, sueles utilizar alguna aplicación que soporta este protocolo para subir los archivos a tu servidor. Cuando descargas archivos desde tu servidor mediante FTP, el proceso es el mismo, pero a la inversa: <strong>Entorno Local ⇋ Aplicación FTP ⇋ Entorno de Producción</strong></li>
+<li><strong>Git</strong> funciona de un modo muy parecido: <strong>Entorno Local ⇋ Repositorio ⇋ Entorno de Producción</strong></li>
+</ul>
+<p>Con Git, partes de un repositorio de código central, al que llamaremos <strong>repositorio origen</strong>. Este repositorio contendrá tu código.</p>
+<p>Cuando trabajas localmente, simplemente creas una copia del repositorio origen, creando un <strong>repositorio local</strong>. Cuando terminas de trabajar y quieres guardar los cambios localmente, agregas el código a tu repositorio local.</p>
+<p>Cuando quieres compartir los cambios que has hecho, debes sincronizar tu repositorio local con el&nbsp; repositorio origen, lo que equivale a subir los cambios. A esta acción se le llama <strong>push</strong>.</p>
+<p>Sin embargo, todavía tienes tu código en el repositorio origen. ¿Qué debes hacer cuando quieres subir estos cambios a tu servidor? Pues muy sencillo; simplemente debes crear una copia del repositorio origen en tu servidor de producción y sincronizarlo. A este repositorio le llamaremos <strong>repositorio de producción</strong>. Bastará una sola línea de código para realizar esta tarea. A esta acción se le llama <strong>pull</strong>.</p>
+<p>Entiendo que esto pueda parecer engorroso al principio, pero con el tiempo no podrás ni siquiera concebir el hecho de trabajar sin esta herramienta, aunque trabajes tú solo en un proyecto.</p>
+<p>Existen también aplicaciones de interfaz gráfica (GUI), como Git Tower, SourceTree e incluso la aplicación de GitHub para Mac y Windows. Su interfaz permite realizar la mayor parte de las acciones que realizarás habitualmente con Git, pero no todas. Es útil aprenderlas, pero más útil resulta <strong>aprender a utilizar Git desde la terminal</strong>. Os aseguro que <strong>es mejor tener estos conocimientos como base</strong>.</p>
+<div class="fw-alert fw-alert-info">
+<i class="fa fa-exclamation-circle alert-icon"></i><strong>Información!</strong> Si insisto tanto que debéis usar Git desde la línea de comandos es porque yo he estado años sin hacerlo, siendo uno de los grandes errores de mi carrera. En muchas ocasiones he dado la sensación de ser un completo inexperto.</div>
+<h2><span id="Instalacion_de_Git">Instalación de Git</span></h2>
+<p>Según cual sea tu sistema operativo, Git se instalará de una forma diferente. Puedes consulta el <a href="https://www.neoguias.com/como-instalar-git/">tutorial de instalación de Git</a> para ver en detalle varios métodos de instalación o seguir los pasos que se muestran a continuación según cual sea tu sistema operativo.</p>
+<h3><span id="Instalacion_de_Git_en_Windows">Instalación de Git en Windows</span></h3>
+<p>Lo mejor que puedes hacer es <a href="https://git-scm.com/download/win" target="_blank" rel="nofollow">descargar Git for Windows</a>. Git for Windows incluye una aplicación llamada <strong>Git Bash</strong> que permite usar los comandos de la terminal de Linux de forma emulada, de modo que funcionen con Windows. Si quieres una guía detallada paso a paso acerca de la instalación de Git en Windows, consulta la <a href="https://www.neoguias.com/instalar-git-windows/">guía de instalación de Git en Windows</a>, aunque con lo que tienes a continuación debería ser suficiente.</p>
+<p>En general, bastará con que sigas los pasos que se muestran en pantalla, seleccionando todas las <strong>opciones que se muestran por defecto</strong>. Lo único, cuando tengas que seleccionar un editor de texto, es recomendable que selecciones un editor diferente a Vim en caso de que jamás hayas usado este editor. Algunas buenas opciones son Notepad++ o VS Code. Si quieres usar un editor de terminal como&nbsp;<strong>nano</strong> consulta <a href="https://www.neoguias.com/como-instalar-y-utilizar-nano/">cómo instalar y utilizar nano</a>. Podrás hacerlo desde Git bash cuando finalice la instalación.</p>
+<div class="fw-alert fw-alert-info">
+<i class="fa fa-exclamation-circle alert-icon"></i><strong>Información!</strong> Otra opción es que actives el subsistema de Linux para Windows, que instales Ubuntu y que luego instales Git del mismo modo que lo harías en Linux. Para ello, primero debes seguir el <a href="https://www.neoguias.com/activar-terminal-linux-windows-10/">tutorial para activar la terminal de Linux en Windows</a>. Seguidamente debes seguir los pasos que se describen en el apartado de instalación de Git en Linux.</div>
+<h3><span id="Instalacion_de_Git_en_Linux">Instalación de Git en Linux</span></h3>
+<p>Para instalar Git en Linux, debes usar el gestor de paquetes que incluye tu distribución.</p>
+<ul>
+<li>Si tu distribución es <strong>Ubuntu</strong> en cualquiera de sus versiones, <strong>Debian</strong> o similar, inicia una ventana de Terminal y actualiza la lista de paquetes disponibles mediante el comando <code>sudo apt-get update</code>. Seguidamente, instala Git utilizando el comando sudo <code>apt-get install git</code>.</li>
+<li>Si tu distribución es <strong>CentOS</strong>, <strong>RHEL</strong>, <strong>Fedora</strong> o similar, inicia una ventana de Terminal e instala Git utilizando el comando <code>yum install git</code>. Si quieres, puedes consultar el <a href="https://www.neoguias.com/como-instalar-git-centos/">tutorial de instalación de Git en CentOS</a>, en donde se explica todo con más detalle.</li>
+</ul>
+<p>Por último e independientemente de la distribución que utilices, ejecuta el comando <code>git --version</code> para comprobar que Git se ha instalado correctamente. Debería mostrarse el número de versión de Git.</p>
+<h3><span id="Instalacion_de_Git_en_Mac">Instalación de Git en Mac</span></h3>
+<p>Para instalar Git en Mac, abre primero una ventana de Terminal. Seguidamente introduce el comando <code>git --version</code> y pulsa <strong>INTRO</strong>. Si se muestra algún número de versión, esto indicará que Git ya está instalado en tu sistema. Si por el contrario se muestra un mensaje indicando que no se ha encontrado el comando, como por ejemplo <code>-bash: git: command not found</code>, entonces debes instalar Git.</p>
+<p>Para instalar Git, primero <a href="https://developer.apple.com/xcode/" target="_blank" rel="nofollow">instala Xcode desde la App Store</a>. Seguidamente inicia Xcode e instala las <strong>Command Line Tools</strong> accediendo a <strong>Preferencias</strong> ➜ <strong>Descargas (Downloads)</strong> ➜ <strong>Command Line Tools</strong>. Y con esto, ya podrás utilizar Git.</p>
+<p>Aunque no es necesario para este tutorial, quizás sea también un buen momento para que instales <a href="https://www.neoguias.com/homebrew/">Homebrew</a>, que es un gestor de paquetes para macOS que facilitará bastante ciertas tareas. De hecho, otro método de instalación consiste en que simplemente instales Homebrew y que luego ejecutes el comando <code>brew install git</code>.</p>
+<h2><span id="Comandos_Basicos_de_Git">Comandos Básicos de Git</span></h2>
+<p>A modo de referencia, aquí tienes una lista con los comandos básicos de Git:</p>
+<ul>
+<li><strong>git status</strong>: Comprueba el estado de un repositorio.</li>
+<li><strong>git add</strong>: Sirve parar agregar los nuevos archivos al repositorio, llevando así un control sobre ellos.</li>
+<li><strong>git commit</strong>: Se utiliza para agrega al repositorio los cambios en los archivos que han sido modificados.</li>
+<li><strong>git push</strong>: Se utiliza para subir los archivos al origen, que en nuestro caso será GitHub.</li>
+<li><strong>git pull</strong>: Se utiliza para descargar los archivos del repositorio junto con los cambios que otros usuarios hayan realizado en él.</li>
+<li><strong>git stash</strong>: Deshacer los cambios no guardados.</li>
+<li><strong>git init</strong>: Se utiliza para crear un nuevo repositorio vacío.</li>
+<li><strong>git config</strong>: Se usa para configurar diversos aspectos de Git.</li>
+<li><strong>git remote</strong>: Sirve para configurar el repositorio remoto asociado a un repositorio local.</li>
+</ul>
+<p>No te preocupes si no entiendes algunos comandos, ya que a continuación veremos cómo se utilizan todos y cada uno de ellos.</p>
+<h2><span id="Crea_un_Repositorio_de_Git">Crea un Repositorio de Git</span></h2>
+<p>Podrías instalar Git en tu servidor para crear un repositorio. Sin embargo, existen muchos servicios que permiten hospedar repositorios, siendo el más conocido GitHub. Llegados a este punto, lo que debes hacer es <a href="https://github.com/" target="_blank" rel="nofollow">crear una cuenta de GitHub</a>. No te preocupes, ya que salvo que quieras utilizar ciertas funcionalidades avanzadas en el marco de un equipo para proyectos privados, es un servicio gratuito.</p>
+<p>Cuando te registres en GitHub tendrás que escoger un nombre de usuario. De ahora en adelante haremos referencia a tu nombre de usuario como <em><strong>«usuario»</strong></em>. Tu URL en GitHub tendrá la forma <code>github.com/usuario</code>.</p>
+<p>Una vez hayas terminado de crear tu cuenta de usuario, haz clic en <strong>Repositories (Repositorios)</strong> desde la interfaz de GitHub y luego en <strong>New (Nuevo)</strong>. Ahora debes introducir un nombre para el repositorio, al que llamaremos <strong><em>«proyecto»</em></strong>. No marques la opción de inicializar el repositorio con un archivo <strong>Readme.md</strong>&nbsp;o con un archivo <strong>.gitignore</strong>, al menos por ahora. Luego haz clic en <strong>Crear repositorio (Create repository)</strong>. Nada más crearlo estará vació, aunque pronto agregaremos algunos archivos.</p>
+<h2><span id="Crea_un_Proyecto_Local">Crea un Proyecto Local</span></h2>
+<p>En este apartado tendrás que utilizar bastante la Terminal. En caso de que no la sepas utilizar, es importante que te familiarices con ella primero consultado el <a href="https://www.neoguias.com/linea-de-comandos/">tutorial de la línea de comandos</a> que se corresponda con tu sistema operativo. Si utilizas Linux o Mac, utilizarás la Terminal. Si utilizas Windows, usarás Git Bash o también la Terminal que incluye el subsistema de Linux para Windows, en caso de que lo hayas activado. Los comandos serán los mismos en cualquier caso.</p>
+<p>Primero inicia la <strong>Terminal</strong>. Aparecerás en tu directorio de usuario. Para confirmarlo usa el comando <code>pwd</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">pwd</span></code></pre>
+<p>Deberías estar en el directorio <code>/Users/usuario</code>, siendo <code>usuario</code> tu nombre de usuario en el sistema operativo.</p>
+<p></p><div class="fw-alert fw-alert-info">
+<i class="fa fa-exclamation-circle alert-icon"></i><strong>Información!</strong> El comando <b>pwd</b> se utiliza para mostrar por pantalla el directorio en el que estás actualmente.</div>Ahora crea un directorio nuevo, que es en donde residirá el código de tu proyecto. Par ello puedes usar el siguiente comando:<p></p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">mkdir</span> mi-proyecto</code></pre>
+<p></p><div class="fw-alert fw-alert-info">
+<i class="fa fa-exclamation-circle alert-icon"></i><strong>Información!</strong> El comando <b>mkdir</b> se utiliza para crear un nuevo directorio.</div>Ahora accede al directorio que has creado:<p></p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">cd</span> mi-proyecto</code></pre>
+<p></p><div class="fw-alert fw-alert-info">
+<i class="fa fa-exclamation-circle alert-icon"></i><strong>Información!</strong> El comando <b>cd</b> se utiliza para cambiar de directorio.</div>De ahora en adelante usaremos comandos de Git. La cantidad de comandos de Git es inmensa, pero has de saber que en el 90% de los casos utilizarás un reducido conjunto de comandos, que son los que aprenderás en esta introducción.<p></p>
+<p>Lo primero que deberías hacer, en caso de que no lo hayas hecho ya, es configurar tu cuenta local de Git, introduciendo tu nombre y tu email. Para ello introduce los siguientes comandos, remplazando los datos de ejemplo por tu nombre y por tu email reales:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"Nombre"</span>
+<span class="token function">git</span> config --global user.email usuario@dominio.tld</code></pre>
+<p>Ahora, asegúrate que estás en el directorio <strong><em>mi-proyecto</em></strong> que has creado previamente e inicializa el repositorio de Git con este comando:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> init</code></pre>
+<p>Esto creará un subdirectorio llamado <code>.git</code> dentro del directorio de tu proyecto. Si no se muestra, introduce el comando <code>ls -la</code> para verlo, o si accedes desde el explorador de Windows, asegúrate de que los archivos ocultos son visibles.</p>
+<p>Ahora viene la parte más interesante, ya que ahora vamos a enlazar el respositorio local con el repositorio de GitHub. Para ello introduce el siguiente comando, reemplazando la URL por la de tu repositorio.</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> remote add origin https://github.com/usuario/proyecto</code></pre>
+<p>Si no sabes cual es la URL de tu repositorio, basta con que accedas a él desde GitHub y copies la URL que se muestra.</p>
+<h2><span id="Agrega_Archivos_al_Proyecto">Agrega Archivos al Proyecto</span></h2>
+<p>Ahora vamos a agregar archivos al proyecto. En este ejemplo agregaremos un archivo llamado <code>index.html</code> y otro llamado <code>style.css</code>. Puedes incluir cualquier cosa en el archivo <code>index.html</code>, como por ejemplo esta plantilla:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"es"</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"utf-8"</span> /<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http-equiv<span class="token operator">=</span><span class="token string">"x-ua-compatible"</span> content<span class="token operator">=</span><span class="token string">"ie=edge"</span> /<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1"</span> /<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Título<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"style.css"</span> /<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Título<span class="token operator">&lt;</span>/h1<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span></code></pre>
+<p>En el archivo <code>style.css</code> puedes incluir, por ejemplo, lo siguiente:</p>
+<pre class="line-numbers language-markup"><code class=" language-markup">body {
+  background-color: grey;
+}
+
+h1 {
+  font-size: 24px;
+}</code></pre>
+<p>Puedes agregar todos los archivos que quieras, aunque en este tutorial daremos por hecho que solamente existen estos dos.</p>
+<p>Seguidamente, comprueba el estado del repositorio mediante el comando <code>git status</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> status</code></pre>
+<p>Seguramente se muestre un mensaje similar a este:</p>
+<pre class=" language-bash"><code class=" language-bash">On branch master
+Initial commit
+
+Untracked files:
+<span class="token punctuation">(</span>use <span class="token string">"git add ..."</span> to include <span class="token keyword">in</span> what will be committed<span class="token punctuation">)</span>
+
+  index.html
+  style.css
+
+nothing added to commit but untracked files present <span class="token punctuation">(</span>use <span class="token string">"git add"</span> to track<span class="token punctuation">)</span></code></pre>
+<p>Se nos indica que existen dos archivos que todavía no han sido agregados al repositorio, por lo que Git no está haciendo un seguimiento con sus cambios.</p>
+<h3><span id="Add_Anade_los_Archivos_al_Repositorio">Add: Añade los Archivos al Repositorio</span></h3>
+<p>Para agregar los archivos que has añadido al repositorio debes usar el comando <code>git add</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> add <span class="token keyword">.</span></code></pre>
+<p>El punto que hemos agregado indica que quieres agregar todos los archivos nuevos que se han encontrado en el directorio del proyecto. Si solo quisieras agregar un archivo, como por ejemplo el archivo <code>index.html</code>, tendrías que usar el siguiente comando:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> add index.html</code></pre>
+<p>Ahora vuelve a ejecutar el comando <code>git status</code> para verificar que los archivos se han agregado correctamente al repostiorio:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> status</code></pre>
+<p>Y estos deberían ser los resultados:</p>
+<pre class=" language-bash"><code class=" language-bash">On branch master
+Initial commit
+
+Changes to be committed:
+<span class="token punctuation">(</span>use <span class="token string">"git rm --cached ..."</span> to unstage<span class="token punctuation">)</span>
+
+  new file: index.html
+  new file: style.css</code></pre>
+<p>Tal y como podrás comprobar, los archivos se&nbsp; han agregado al repositorio.</p>
+<h3><span id="Commit_Guarda_los_Cambios_en_el_Repositorio">Commit: Guarda los Cambios en el Repositorio</span></h3>
+<p>Hemos agregado los archivos al repositorio, pero todavía tenemos que agregar los cambios en los archivos mediante el comando <code>git commit</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> commit -m <span class="token string">"Commit inicial"</span></code></pre>
+<p>Hemos utilizado el flag <code>-m</code>, que nos permite introducir un mensaje en la propia línea en la que escribimos el comando. De lo contrario se abrirá un editor externo, en donde tendrás que guardar los cambios y salir. Decir que en caso de que te olvides del comentario, se abra Vim y no sepas utilizarlo, lo cual es bastante común, debes escribir <code>:q!</code> y pulsar <strong>INTRO</strong> para cerrar el editor.</p>
+<p>Cada vez que realices cambios que quieras guardar en los archivos del repositorio tendrás que ejecutar el comando anterior, ya que de lo contrario, Git los ignorará.</p>
+<p>Y por última vez, ejecuta de nuevo el comando <code>git status</code> para verificar el estado de los archivos:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token punctuation">[</span>master <span class="token punctuation">(</span>root-commit<span class="token punctuation">)</span><span class="token punctuation">]</span> Initial
+  2 files changed, 20 insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+
+  create mode index.html
+  create mode style.css</code></pre>
+<p>Todavía no hemos visto las <strong>ramas (branches)</strong> de Git. Sin embargo, has de saber que por ahora estás trabajando con la rama principal o <strong>master</strong>.</p>
+<h3><span id="Stash_Deshaz_los_Cambios_no_Guardados">Stash: Deshaz los Cambios no Guardados</span></h3>
+<p>Es muy habitual que tras haber modificado varios archivos quieras deshacer todos los cambios. De este modo te ahorras el tener que editar los archivos uno a uno. Siempre y cuando no hayas hecho un <code>commit</code> de los cambios, podrás deshacerlos mediante el comando <code>git stash</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> stash</code></pre>
+<p>Ten cuidado, ya que esto deshará todos los cambios no guardados.</p>
+<h3><span id="Push_Sube_el_Codigo_al_Repositorio_Remoto">Push: Sube el Código al Repositorio Remoto</span></h3>
+<p>Ahora vamos a subir los cambios al servidor, por lo que debes utilizar el comando <code>git push</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> push origin master</code></pre>
+<p>Se mostrará un mensaje en la Terminal en el que se te pedirá que introduzcas tu nombre de usuario y contraseña. Al igual que muchas otras contraseñas en Linux, esta no tiene eco, por lo que no se mostrará en pantalla cuando la introduzcas.</p>
+<p>Lo que has hecho ha sido subir el código al origen agregado al inicio del tutorial, que es tu cuenta de GitHub. En concreto, has subido el código a la rama <strong>master</strong>.</p>
+<p>Desde ahora podrás trabajar con este código desde cualquier ordenador o servidor.</p>
+<h3><span id="Pull_Actualiza_el_Repositorio_Remoto">Pull: Actualiza el Repositorio Remoto</span></h3>
+<p>Imagínate que otro usuario que utiliza el mismo repositorio ha agregado un archivo o ha modificado alguno de los que has subido al repositorio. Lo ideal sería que pudieses obtener los cambios directamente, y esto es precisamente lo que hace el comando <code>git pull</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> pull</code></pre>
+<p>Una vez se haya ejecutado el comando anterior, deberías tener tu repositorio local actualizado.</p>
+<h2><span id="Crea_un_Repositorio_en_tu_Servidor">Crea un Repositorio en tu Servidor</span></h2>
+<p>Para explicar esto vamos a partir de que dispones de un servidor o de una cuenta de hosting a la que puedes acceder mediante <strong>SSH</strong>. Si estás leyendo este tutorial es por que quizás, antes subías los archivos mediante FTP. Bastaba con introducir la URL de tu servidor, el puerto, tu nombre de usuario y la contraseña para acceder mediante alguna aplicación de interfaz gráfica.</p>
+<p>Ahora tendrás que acceder mediante <strong>SSH</strong>, que te permitirá hacer lo mismo, pero desde la línea de comandos. Tendrás que usar el comando <code>ssh</code> para acceder a tu servidor o a tu cuenta de hosting. Si usas una cuenta de hosting compartido y no dispones de los datos de acceso, consúltalos en el mismo panel en donde están los datos de acceso mediante FTP, ya que suelen encontrarse ahí.</p>
+<p>Una vez tengas los datos de acceso SSH, introduce el siguiente comando, reemplazando <strong><em>«usuario»</em></strong> por tu nombre de usuario y <em><strong>«dominio.com»</strong></em> por el nombre de algún dominio o subdominio que apunte a tu servidor:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">ssh</span> usuario@dominio.com</code></pre>
+<p>Si tu servidor no usa el puerto <code>22</code>, tendrás que especificarlo mediante el flag <code>-p</code>, como en este ejemplo en el que usamos el puerto <code>23</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">ssh</span> usuario@dominio.com -p 23</code></pre>
+<p>Acto seguido se te preguntará por tu contraseña de usuario. Una vez la introduzcas ya estarás dentro de tu servidor, por lo que todo lo que ejecutes no se ejecutará en tu entorno local, sino en tu servidor. Si quieres cerrar la conexión para volver a tu servidor, basta con que uses el comando <code>exit</code>.</p>
+<p>Antes de nada, debes instalar GitHub en tu servidor. Para ello, sigue las instrucciones que se mostraban algo más arriba, pero para el sistema operativo de tu servidor, o también puedes <a href="https://www.neoguias.com/como-instalar-git/">consultar la guía de instalación de Git</a>. Debes configurar tanto tu nombre como tu dirección de email al gual que antes. Puedes consultar estas opciones en cualquier momento mediante el siguiente comando:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> --list</code></pre>
+<p>Seguramente uses algún panel como CPanel o <a href="https://www.neoguias.com/instalar-vestacp-en-centos/">VestaCP</a>, o quizás tengas algún host virtual ya configurado. Si no es así, esto es algo que se sale del alcance de este tutorial y que puedes consultar en muchos otros tutoriales. Partiendo de esto, accede desde la Terminal al <strong>directorio</strong> de tu proyecto mediante el comando <code>cd</code>, que es aquel al que accedías mediante FTP para subir tus archivos.</p>
+<p>Una vez estés en el directorio adecuado, utiliza el comando <code>git init</code> para inicializar un nuevo repositorio:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> init</code></pre>
+<p>Seguidamente, configura el repositorio remoto con los datos de tu repositorio de GitHub, al igual que has hecho con tu repositorio local.</p>
+<pre class=" language-basic"><code class=" language-basic">git remote add origin https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github.<span class="token keyword">com</span><span class="token operator">/</span>usuario<span class="token operator">/</span>proyecto.git</code></pre>
+<p>Ahora basta con que hagas un pull para descargar la rama <code>master</code>, que es la que contiene el código que has agregado al repositorio:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> pull origin master</code></pre>
+<p>Otra opción es que en vez de agregar el origen y realizar el <code>pull</code>, clones el repositorio mediante el comando <code>git clone</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> clone git@github.com:usuario/proyecto.git</code></pre>
+<p>Si accedes a la URL en la que está tu proyecto desde el navegador deberías poder ver tu proyecto. De ahora en adelante, bastará con que hagas un <code>pull</code> desde la terminal mediante SSH para actualizar el código de tu proyecto. Mucho más rápido que utilizando FTP.</p>
+<h2><span id="Que_son_las_Ramas_y_como_Crearlas">Qué son las Ramas y cómo Crearlas</span></h2>
+<p>Cuando creas un repositorio se crea una rama por defecto, que es la rama <strong>master</strong>, que es la única que has utilizado hasta ahora. Una rama es una versión paralela a la principal en la que se suelen agregar nuevas funcionalidades, manteniendo así la estabilidad de la rama <strong>master</strong>. Por ejemplo, si trabajas solo, seguramente quieras tener una rama de desarrollo en la que agregar nuevas funcionalidades. A esta rama se le suele dar el nombre de <strong>dev</strong>. Sin embargo, es habitual agregar una <strong>rama</strong> para cada nueva <strong>funcionalidad</strong>, especialmente cuando trabajas en un equipo.</p>
+<h3><span id="Branch_Trabajando_con_Ramas">Branch: Trabajando con Ramas</span></h3>
+<p>Para saber la rama en la que estás actualmente, utilizarás el comando <code>git branch</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> branch</code></pre>
+<p>Esto es lo que se debería mostrar por pantalla:</p>
+<pre class=" language-bash"><code class=" language-bash">$ <span class="token function">git</span> branch
+* master</code></pre>
+<p>Como podrás comprobar, tan solo existe una rama en tu repositorio local. De haber más, se mostrarían todas las ramas, y aquella con la que estás actualmente se indicará con un asterisco situado justo antes del nombre de la rama.</p>
+<p>En caso de que quieras borrar una rama, tendrías que usar el comando <code>git branch</code> junto con el flag <code>-d</code> y el nombre de la rama a eliminar. Nunca debes eliminar la rama master. Por ejemplo:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> branch -d nombrerama</code></pre>
+<h3><span id="Checkout_Cambia_o_Crea_Ramas">Checkout: Cambia o Crea Ramas</span></h3>
+<p>Si quieres cambiar de rama a otra existente, tendrías que utilizar el comando <code>git checkout</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> checkout nombre-rama</code></pre>
+<p>Para crear una rama nueva, tendrás que usar el comando <code>git checkout</code> junto con el flag <code>-b</code>, que indica que quieres crear una rama vacía. Vamos a crear una nueva rama. En este ejemplo le llamaremos <code>funcionalidad</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> checkout -b funcionalidad</code></pre>
+<p>El comando anterior cambiará automáticamente de rama, por lo que ahora deberías estar trabajando en la rama <code>funcionalidad</code>. Para comprobarlo, ejecuta de nuevo el comando <code>git branch</code>:</p>
+<pre class=" language-bash"><code class=" language-bash">$ <span class="token function">git</span> branch
+master
+* funcionalidad</code></pre>
+<p>Tal y como puedes comprobar, ahora estás trabajando en la rama <code>funcionalidad</code>. Puedes modificar el código de esta nueva rama e incluso agregar o eliminar archivos sin que esto afecte a la rama <code>master</code> en la que estabas anteriormente.</p>
+<p>Por ejemplo, vamos a renombrar el archivo <code>style.css</code> y le vamos a dar el nombre de <code>style2.css</code>. Luego edita el archivo <code>index.html</code> y cambia la línea en la que se incluye el archivo <code>style.css</code>, de modo que se incluya el archivo <code>style2.css</code>. Agrega también alguna línea adicional al archivo <code>index.html</code>, como por ejemplo algo de texto y algún encabezado <code>h2</code>.</p>
+<p>Ahora ejecuta el comando <code>git add</code> para agregar los nuevos archivos a Git, de modo que Git sepa que debe realizar un seguimiento del archivo <code>style2.css</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> add <span class="token keyword">.</span></code></pre>
+<p>Suidamente, haz un <code>commit</code> de los cambios realizados para guardarlos:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> commit -m <span class="token string">"Estilos modificados"</span></code></pre>
+<p>Los cambios se guardarán en la rama <strong>funcionalidad</strong>.</p>
+<p>Ahora haz un <code>checkout</code> de la rama master para trabajar de nuevo con ella:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> checkout master</code></pre>
+<p>Y tal y como podrás comprobar, el archivo <code>style.css</code> que habías borrado está de vuelta. Del mismo modo, los cambios que habías realizado en el archivo <code>index.html</code> ya no están presentes</p>
+<h3><span id="Diff_Visualiza_Diferencias_entre_Ramas">Diff: Visualiza Diferencias entre Ramas</span></h3>
+<p>Si quieres ver las diferencias entre ambas ramas, puedes usar el comando <code>git diff</code>, especificando aquellas ramas cuyas diferencias quieres ver por pantalla:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> <span class="token function">diff</span> --stat master funcionalidad</code></pre>
+<p>Se mostrarán aquellas línea modificadas y aquellos archivos que han sido agregados o eliminados.</p>
+<p>En el siguiente apartado veremos cómo puedes integrar la nueva <strong>funcionalidad</strong> que has creado en la&nbsp; rama <strong>master</strong>.</p>
+<h2><span id="Merge_Integrando_Ramas_y_Funcionalidades">Merge: Integrando Ramas y Funcionalidades</span></h2>
+<p>Una vez has terminado de trabajar en una funcionalidad, debes integrar los cambios en tu rama <strong>master</strong>. Habitualmente suelen integrase los cambios en alguna rama de prueba o testing, de forma que los cambios se pueden probar antes de pasar a producción. Sin embargo, simplificaremos las cosas integrando los cambios en la rama <strong>master</strong>.</p>
+<p>Lo que vamos a hacer es un branch merging, que consiste en mezclar o integrar nuestra rama <strong>funcionalidad</strong> con nuestra rama <strong>master</strong>. Para ellos debemos hacer un <code>checkout</code> para trabajar con la rama master y, seguidamente, integrar la rama funcionalidad mediante el comand <code>git merge</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> checkout master
+<span class="token function">git</span> merge funcionalidad</code></pre>
+<p>Y con esto, ya tendríamos la rama master actualizada con los cambios que hemos realizado en la rama <strong>funcionalidad</strong>. Una vez hayas integrado una rama, ya no la necesitarás más, por lo que puedes borrarla:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> branch -d funcionalidad</code></pre>
+<h2><span id="Resolucion_de_Conflictos">Resolución de Conflictos</span></h2>
+<p>Imagínate que has creado una rama llamada <strong>funcionalidad-a</strong> y otra llamada <strong>funcionalidad-b</strong>, y que en ambas ramas has modificado las mismas líneas del archivo <code>index.html</code>. Cuando hagas un <code>merge</code> de la <strong>funcionalidad-a</strong> en <strong>master,</strong> no habrá ningún problema. Sin embargo, cuando hagas un <code>merge</code> de la <strong>funcionalidad-b</strong>, aparecerá un conflicto, ya que, dado que ambas rabas fueron creadas desde el mismo punto, Git no sabrá con qué código ha de quedarse, mostrándose un mensaje similar a este:</p>
+<pre class="line-numbers language-bash"><code class=" language-bash"><span class="token function">git</span> merge funcionalidad-b
+Auto-merged deliverance.py
+CONFLICT <span class="token punctuation">(</span>content<span class="token punctuation">)</span>: Merge conflict <span class="token keyword">in</span> index.html
+Automatic merge failed<span class="token punctuation">;</span> fix conflcits and <span class="token keyword">then</span> commit the result.</code></pre>
+<p>En este caso, Git agregará ambas versiones del código a los archivos, indicando a qué rama corresponde cada porción de código que está en conflicto. Debemos editar el archivo <code>index.html</code> con cualquier editor y, manualmente, borrar el código de la versión que no queremos incluir. Una vez soluciones este conflicto, realiza un <code>git add</code> y un <code>git commit</code> de los cambios:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> add index.html
+<span class="token function">git</span> commit -m <span class="token string">"Solución de conflicto durante merge"</span></code></pre>
+<p>Y con esto, el conflicto debería estar solucionado.</p>
+<h3><span id="Como_Deshacer_un_Merge">Cómo Deshacer un Merge</span></h3>
+<p>Siempre se puede dar el caso de que o bien tú o bien algún miembro del equipo hayáis hecho algo mal o hayáis integrado código que no deberíais. Por norma general, suele ser culpa del otro miembro del equipo, y esto mismo también se aplica al otro miembro del equipo. La culpa suele ser el espíritu que ronda la oficina. En mi caso, suelo crear una copia de la rama en la que integro los cambios por si algo va mal. Ya sea este el caso o si ves que los conflictos son excesivos, es recomendable deshacer el <code>merge</code>.</p>
+<p>Git incluye el comando <code>reset</code>, que te permitirá volver a algún paso anterior, antes de realizar el <code>merge</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> reset --hard HEAD</code></pre>
+<p>El comando <code>reset</code> sirve para devolver el índice de archivos de Git a un estado anterior, pero no actualizará los archivos en el directorio de tu proyecto, por lo que debes agregar el flag <code>--hard HEAD</code> para revertir los cambios tanto en el índice de Git como en los archivos de tu proyecto.</p>
+<h3><span id="Como_Deshacer_un_Commit">Cómo Deshacer un Commit</span></h3>
+<p>En caso de que lo único que queras deshacer sea un commit del que te hayas arrepentido, debes hacer también un reset, pero en lugar de usar la opción <code>--hard HEAD</code>, debes usar el flag <code>--hard ORIG_HEAD</code>:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> reset --head ORIG_HEAD</code></pre>
+<p>Debes tener en cuenta que esto solamente revertirá el último <code>commit</code>. En caso de que quieras revertir más commits, tendrías que usar el comando <code>revert</code>, que es quizás demasiado complicado para lo que se pretende en este tutorial. Además, si haces las cosas bien, su uso es poco frecuente.</p>
+<h2><span id="Ayuda_de_Git">Ayuda de Git</span></h2>
+<p>Git incluye in comando de ayuda que te proporcionará información acerca de los diferentes comandos que puedes usar con Git. Por ejemplo, vamos a consultar la ayuda del comando git merge con el siguiente comando:</p>
+<pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> <span class="token function">help</span> merge</code></pre>
+<p>Y esto ha sido todo.</p>
+<hr>
+<div class="container-fluid autor-info neo-widget">
+<div class="row">
+<div class="col-md-3">
+<img alt="Avatar de Edu Lazaro" src="./style_files/avatar.gif" data-src="/wp-content/themes/neoguias/img/avatar.gif" class=" avatar avatar-150 photo lazyloaded " height="150" width="150" data-srcset="https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=300&amp;r=g 2x" srcset="https://secure.gravatar.com/avatar/a97a54103b934b14ca1794702ddae86c?s=300&amp;r=g 2x">
+</div>
+<div class="col-md-5">
+<p class="autor-descripcion">
+<a href="https://twitter.com/neeonez" title="Visitar el sitio de Edu Lázaro" rel="author external">Edu Lázaro</a>: Ingeniero técnico en informática, actualmente trabajo como desarrollador web y programador de videojuegos. </p>
+</div>
+<div class="col-md-4">
+<ul>
+<li><i class="fa fa-twitter"></i> <a href="https://twitter.com/neeonez">Twitter!</a></li>
+<li><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/edulazaro">LinkedIn!</a></li>
+<li><i class="fa fa-github-alt"></i> <a href="https://github.com/edulazaro">GitHub!</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="neo-widget neo-widget-strong mt-2">
+<audio id="sound-bee" src="/wp-content/themes/neoguias/sounds/bee.mp3" preload="auto"></audio>
+<audio id="sound-some" src="/wp-content/themes/neoguias/sounds/some.mp3" preload="auto"></audio>
+<p>👋 Hola! Soy Edu, me encanta crear cosas y he redactado esta guía. Si te ha resultado útil, el mayor favor que me podrías hacer es el de <a href="https://www.neoguias.com/git/#" class="sound-link-bee" onclick="window.open(`https://twitter.com/intent/tweet?text=Me%20ha%20resultado%20útil%20el%20artículo%20que%20@neeonez%20ha%20escrito%20en%20NeoGuias: Tutorial+de+Introducci%C3%B3n+a+Git%0A%0Ahttps://www.neoguias.com/git/`, &#39;share-twitter&#39;, &#39;width=550, height=235&#39;); return false;">compatirla en Twitter</a> 😊</p>
+<p class="my-1">Si quieres conocer mis proyectos, <a target="_blank" class="sound-link-some" href="https://twitter.com/neeonez">sígueme en Twitter</a>.</p>
+</div>
+</div>
+<footer class="entry-footer">
+<span class="cat-links"></span>
+</footer>
+</article>
+<div class="comments-area" id="comments">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Deja una respuesta <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.neoguias.com/git/#respond" style="display:none;">Cancelar la respuesta</a></small></h3><form action="https://www.neoguias.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> <span class="required-field-message" aria-hidden="true">Los campos obligatorios están marcados con <span class="required" aria-hidden="true">*</span></span></p><div class="form-group comment-form-comment">
+<label for="comment">Commentario <span class="required">*</span></label>
+<textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
+</div><div class="form-group comment-form-author"><label for="author">Nombre <span class="required">*</span></label> <input class="form-control" id="author" name="author" type="text" value="" size="30" aria-required="true"></div>
+<div class="form-group comment-form-email"><label for="email">Email <span class="required">*</span></label> <input class="form-control" id="email" name="email" type="email" value="" size="30" aria-required="true"></div>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="btn btn-secondary" value="Publicar el comentario"> <input type="hidden" name="comment_post_ID" value="17359" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="21337e2ca8"></p><p style="display: none !important;"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1654632662184"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form> </div>
+</div>
+</main>
+</div>
+
+<div class="widget-area" id="right-sidebar" role="complementary" style="height: auto !important;">
+<div class="sidebar-sticky" style="height: auto !important;">
+<div class="sidebar-sticky-item" style="height:20%;">
+<div class="stick-me">
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5575737924594063" data-ad-slot="1443926187" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"></ins></ins></ins>
+<script>
+                     /*(adsbygoogle = window.adsbygoogle || []).push({});*/
+                </script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5575737924594063" data-ad-slot="3878517838" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"></ins></ins></ins>
+<script>
+                     /*(adsbygoogle = window.adsbygoogle || []).push({});*/
+                </script>
+</div>
+</div>
+<div class="sidebar-sticky-item" style="height: auto !important;">
+<div class="stick-me" style="height: auto !important;">
+
+<ins class="adsbygoogle" style="display: block; height: 250px;" data-ad-client="ca-pub-5575737924594063" data-ad-slot="2622767174" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_2_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/ads.html" data-google-container-id="a!3" data-google-query-id="CKjyxsiXnPgCFVYwAQodT70Krg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+                             /*(adsbygoogle = window.adsbygoogle || []).push({});*/
+                        </script>
+</div>
+</div>
+<div class="sidebar-sticky-item" style="height: auto !important;">
+<div class="stick-me" style="height: auto !important;">
+
+<ins class="adsbygoogle" style="display: block; height: 250px;" data-ad-client="ca-pub-5575737924594063" data-ad-slot="7508316243" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_3_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_3_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/ads(1).html" data-google-container-id="a!4" data-google-query-id="CP6E18iXnPgCFVA0AQod4gYEXg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+                            /* (adsbygoogle = window.adsbygoogle || []).push({});*/
+                        </script>
+</div>
+</div>
+<div class="sidebar-sticky-item" style="height: auto !important;">
+<div class="stick-me" style="height: auto !important;">
+
+<ins class="adsbygoogle" style="display: block; height: 250px;" data-ad-client="ca-pub-5575737924594063" data-ad-slot="4334470037" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_4_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_4_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/ads(2).html" data-google-container-id="a!5" data-google-query-id="CPGKqcmXnPgCFQs6AQode8cN7A" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+                             /*(adsbygoogle = window.adsbygoogle || []).push({});*/
+                        </script>
+</div>
+</div>
+<div class="sidebar-sticky-item" style="height:20%;">
+<div class="stick-me">
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5575737924594063" data-ad-slot="7780790839" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_5_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_5_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/ads(3).html" data-google-container-id="a!6" data-google-query-id="CLf0qMmXnPgCFRw-AQodrTsDPQ" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+                             /*(adsbygoogle = window.adsbygoogle || []).push({});*/
+                        </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrapper" id="wrapper-footer-full">
+<div class="container" id="footer-full-content" tabindex="-1">
+<div class="row">
+<div id="custom_html-6" class="widget_text footer-widget widget_custom_html widget-count-4 col-md-3"><h3 class="widget-title">Información</h3><div class="textwidget custom-html-widget"><ul class="neo_widget_links">
+<li>
+<a href="https://www.neoguias.com/politica-de-privacidad">Política de privacidad</a>
+</li>
+<li>
+<a href="https://www.neoguias.com/terminos-de-uso">Términos de uso</a>
+</li>
+</ul></div></div><div id="custom_html-3" class="widget_text footer-widget widget_custom_html widget-count-4 col-md-3"><h3 class="widget-title">Contenidos</h3><div class="textwidget custom-html-widget"><ul class="neo_widget_links">
+<li><a href="https://www.neoguias.com/guias">Guías de aprendizaje</a></li>
+<li><a href="https://www.neoguias.com/taller">Proyectos de aprendizaje</a></li>
+<li><a href="https://www.neoguias.com/introducciones">Tutoriales de introducción</a></li>
+</ul></div></div><div id="custom_html-5" class="widget_text footer-widget widget_custom_html widget-count-4 col-md-3"><h3 class="widget-title">Tutoriales</h3><div class="textwidget custom-html-widget"><ul class="neo_widget_links">
+<li>
+<a href="https://www.neoguias.com/tutoriales/sistemas">Tutoriales de Sistemas</a>
+</li>
+<li>
+<a href="https://www.neoguias.com/tutoriales/aplicaciones">Tutoriales de Aplicaciones</a>
+</li>
+<li>
+<a href="https://www.neoguias.com/tutoriales/programacion">Tutoriales de Programación</a>
+</li>
+</ul></div></div><div id="custom_html-4" class="widget_text footer-widget widget_custom_html widget-count-4 col-md-3"><h3 class="widget-title">Comunidad</h3><div class="textwidget custom-html-widget"><p>
+Actualízate con el contenido de Neoguias
+</p>
+<ul class="neo_widget_follow-us">
+<li class="rss"><a href="https://www.neoguias.com/feed/" target="_blank" rel="nofollow noopener"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+<li class="facebook"><a href="https://www.facebook.com/neoguiascom/" target="_blank" rel="nofollow noopener"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li class="twitter"><a href="https://twitter.com/neoguiascom" target="_blank" rel="nofollow noopener"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li class="email"><a href="mailto:info@neeonez.com" class="manual-optin-trigger"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+</ul></div></div>
+</div>
+</div>
+</div>
+<div class="wrapper" id="wrapper-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<footer class="site-footer" id="colophon">
+<div class="site-info">
+© &nbsp;2022 <a href="https://www.neoguias.com/" rel="nofollow" target="_parent">neoguias.com</a>. Desarrollado con mucho ❤️ por Edu Lazaro<br>
+KENODO® LTD <a href="https://www.kenodo.com/" rel="nofollow" target="_parent">kenodo.com</a>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</div>
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async="" data-noptimize="1" src="./style_files/lazysizes.min.js.descarga"></script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+<script src="./style_files/e-202223.js.descarga" defer=""></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:10.7',blog:'139599777',post:'17359',tz:'2',srv:'www.neoguias.com'} ]);
+	_stq.push([ 'clickTrackerInit', '139599777', '17359' ]);
+</script>
+<script type="text/javascript" id="cookieinfo" data-linkmsg="Más información" data-moreinfo="/politica-de-privacidad" data-close-text="Aceptar" data-message="Para mejorar tu experiencia en nuestra web utilizamos cookies. Si aceptas o continúas navegando significa que aceptas su uso. Obtén más información sobre cómo las usamos y cómo puedes controlarlas en nuestra política de cookies.">
+    !function(e){"use strict";var t=e,i=t.document,o="cbinstance";var n={get:function(e){return decodeURIComponent(i.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},set:function(e,t,o,n,s,r){if(!e||/^(?:expires|max\-age|path|domain|secure)$/i.test(e))return!1;var a="";if(o)switch(o.constructor){case Number:a=o===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+o;break;case String:a="; expires="+o;break;case Date:a="; expires="+o.toUTCString()}return i.cookie=encodeURIComponent(e)+"="+encodeURIComponent(t)+a+(s?"; domain="+s:"")+(n?"; path="+n:"")+(r?"; secure":""),!0},has:function(e){return new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=").test(i.cookie)},remove:function(e,t,o){return!(!e||!this.has(e))&&(i.cookie=encodeURIComponent(e)+"=; expires=Thu, 01 Jan 1970 00:00:00 GMT"+(o?"; domain="+o:"")+(t?"; path="+t:""),!0)}},s={merge:function(){var e,t={},i=0,o=arguments.length;if(0===o)return t;for(;i<o;i++)for(e in arguments[i])Object.prototype.hasOwnProperty.call(arguments[i],e)&&(t[e]=arguments[i][e]);return t},str2bool:function(e){switch((e=""+e).toLowerCase()){case"false":case"no":case"0":case"":return!1;default:return!0}},fade_in:function(e){e.style.opacity<1&&(e.style.opacity=(parseFloat(e.style.opacity)+.05).toFixed(2),t.setTimeout(function(){s.fade_in(e)},50))},get_data_attribs:function(e){var t={};if(Object.prototype.hasOwnProperty.call(e,"dataset"))t=e.dataset;else{var i,o=e.attributes;for(i in o)if(Object.prototype.hasOwnProperty.call(o,i)){var n=o[i];if(/^data-/.test(n.name))t[s.camelize(n.name.substr(5))]=n.value}}return t},normalize_keys:function(e){var t={};for(var i in e)if(Object.prototype.hasOwnProperty.call(e,i)){var o=s.camelize(i);t[o]=e[o]?e[o]:e[i]}return t},camelize:function(e){for(var t="-",i=e.indexOf(t);-1!=i;){var o=i===e.length-1,n=o?"":e[i+1],s=n.toUpperCase(),r=o?t:t+n;i=(e=e.replace(r,s)).indexOf(t)}return e},find_script_by_id:function(e){for(var t=i.getElementsByTagName("script"),o=0,n=t.length;o<n;o++)if(e===t[o].id)return t[o];return null}},r=s.find_script_by_id("cookieinfo"),a=e.cookieinfo=function(e){this.init(e)};a.prototype={cookiejar:n,init:function(t){this.inserted=!1,this.closed=!1,this.test_mode=!1;if(this.default_options={cookie:"we-love-cookies",closeText:"&#10006;",cookiePath:"/",debug:!1,expires:1/0,zindex:1e20,mask:!1,maskOpacity:.5,maskBackground:"#999",height:"auto",minHeight:"21px",bg:"#eee",fg:"#333",link:"#31A8F0",divlink:"#000",divlinkbg:"#F1D600",position:"bottom",message:"We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",linkmsg:"More info",scriptmsg:"Cookie Info Script",moreinfo:"http://wikipedia.org/wiki/HTTP_cookie",scriptinfo:"https://cookieinfoscript.com",tracking:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",effect:null,fontSize:"14px",fontFamily:"verdana, arial, sans-serif",instance:o,textAlign:"center",acceptOnScroll:!1},this.options=this.default_options,this.script_el=r,this.script_el){var i=s.get_data_attribs(this.script_el);this.options=s.merge(this.options,i)}t&&(t=s.normalize_keys(t),this.options=s.merge(this.options,t)),o=this.options.instance,this.options.zindex=parseInt(this.options.zindex,10),this.options.mask=s.str2bool(this.options.mask),"string"==typeof this.options.expires&&"function"==typeof e[this.options.expires]&&(this.options.expires=e[this.options.expires]),"function"==typeof this.options.expires&&(this.options.expires=this.options.expires()),this.script_el&&this.run()},log:function(){"undefined"!=typeof console&&console.log.apply(console,arguments)},run:function(){if(!this.agreed()){var e=this;!function(e,t){var i=!1,o=!0,n=e.document,s=n.documentElement,r=n.addEventListener?"addEventListener":"attachEvent",a=n.addEventListener?"removeEventListener":"detachEvent",c=n.addEventListener?"":"on",l=function(o){"readystatechange"==o.type&&"complete"!=n.readyState||(("load"==o.type?e:n)[a](c+o.type,l,!1),!i&&(i=!0)&&t.call(e,o.type||o))},p=function(){try{s.doScroll("left")}catch(e){return void setTimeout(p,50)}l("poll")};if("complete"==n.readyState)t.call(e,"lazy");else{if(n.createEventObject&&s.doScroll){try{o=!e.frameElement}catch(e){}o&&p()}n[r](c+"DOMContentLoaded",l,!1),n[r](c+"readystatechange",l,!1),e[r](c+"load",l,!1)}}(t,function(){e.insert()})}},build_viewport_mask:function(){var e=null;if(!0===this.options.mask){var t=this.options.maskOpacity,o='<div id="cookieinfo-mask" style="position:fixed;top:0;left:0;width:100%;height:100%;background:'+this.options.maskBackground+";zoom:1;filter:alpha(opacity="+100*t+");opacity:"+t+";z-index:"+this.options.zindex+';"></div>',n=i.createElement("div");n.innerHTML=o,e=n.firstChild}return e},agree:function(){return this.cookiejar.set(this.options.cookie,1,this.options.expires,this.options.cookiePath),!0},agreed:function(){return this.cookiejar.has(this.options.cookie)},close:function(){return this.inserted&&(this.closed||(this.element&&this.element.parentNode.removeChild(this.element),this.element_mask&&this.element_mask.parentNode.removeChild(this.element_mask),this.closed=!0)),this.closed},agree_and_close:function(){return this.agree(),this.close()},cleanup:function(){return this.close(),this.unload()},unload:function(){return this.script_el&&this.script_el.parentNode.removeChild(this.script_el),e[o]=void 0,!0},insert:function(){this.element_mask=this.build_viewport_mask();var e=this.options.zindex;this.element_mask&&(e+=1);var t=i.createElement("div");t.className="cookieinfo",t.style.position="fixed",t.style.left=0,t.style.right=0,t.style.height=this.options.height,t.style.minHeight=this.options.minHeight,t.style.zIndex=e,t.style.background=this.options.bg,t.style.color=this.options.fg,t.style.lineHeight=t.style.minHeight,t.style.padding="8px 18px",t.style.fontFamily=this.options.fontFamily,t.style.fontSize=this.options.fontSize,t.style.textAlign=this.options.textAlign,"top"===this.options.position?t.style.top=0:t.style.bottom=0,t.innerHTML='<div class="cookieinfo-close" style="float:right;display:block;padding:5px 8px 5px 8px;min-width:100px;margin-left:5px;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;">'+this.options.closeText+'</div><span style="display:block;padding:5px 0 5px 0;">'+this.options.message+" <a>"+this.options.linkmsg+"</a><img> <a>"+this.options.scriptmsg+"</a></span>",this.element=t;var o=t.getElementsByTagName("a")[0];o.href=this.options.moreinfo,o.style.textDecoration="none",o.style.color=this.options.link;var n=t.getElementsByTagName("a")[1];n.href=this.options.scriptinfo,n.style.textDecoration="none",n.style.display="none",n.style.color=this.options.link;var r=t.getElementsByTagName("div")[0];r.style.cursor="pointer",r.style.color=this.options.divlink,r.style.background=this.options.divlinkbg,r.style.textAlign="center";var a=t.getElementsByTagName("img")[0];function c(e,t,i){var o=e.addEventListener?"addEventListener":"attachEvent",n=e.addEventListener?"":"on";e[o](n+t,i,!1)}a.src=this.options.tracking,a.style.display="none";var l=this;c(r,"click",function(){l.agree_and_close()}),this.element_mask&&(c(this.element_mask,"click",function(){l.agree_and_close()}),i.body.appendChild(this.element_mask)),this.options.acceptOnScroll&&c(window,"scroll",function(){l.agree_and_close()}),i.body.appendChild(this.element),this.inserted=!0,"fade"===this.options.effect?(this.element.style.opacity=0,s.fade_in(this.element)):this.element.style.opacity=1}},r&&(e[o]||(e[o]=new a))}(window);
+</script>
+<script defer="" src="./style_files/autoptimize_8907ea3b9fb50474d2f49ba737b6abd7.js.descarga"></script>
+
+<img src="./style_files/g.gif" alt="" width="6" height="5" id="wpstats"><div class="cookieinfo" style="position: fixed; left: 0px; right: 0px; height: auto; min-height: 21px; z-index: 2147483647; background: rgb(238, 238, 238); color: rgb(51, 51, 51); line-height: 21px; padding: 8px 18px; font-family: verdana, arial, sans-serif; font-size: 14px; text-align: center; bottom: 0px; opacity: 1;"><div class="cookieinfo-close" style="float: right; display: block; padding: 5px 8px; min-width: 100px; margin-left: 5px; border-radius: 5px; cursor: pointer; color: rgb(0, 0, 0); background: rgb(241, 214, 0); text-align: center;">Aceptar</div><span style="display:block;padding:5px 0 5px 0;">Para mejorar tu experiencia en nuestra web utilizamos cookies. Si aceptas o continúas navegando significa que aceptas su uso. Obtén más información sobre cómo las usamos y cómo puedes controlarlas en nuestra política de cookies. <a href="https://www.neoguias.com/politica-de-privacidad" style="text-decoration: none; color: rgb(49, 168, 240);">Más información</a><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="display: none;"> <a href="https://cookieinfoscript.com/" style="text-decoration: none; display: none; color: rgb(49, 168, 240);">Cookie Info Script</a></span></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_6_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_6_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/ads(4).html" data-google-container-id="a!7" data-load-complete="true"></iframe></ins></ins></ins><iframe src="./style_files/aframe.html" width="0" height="0" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: none; width: 100% !important; height: 97px !important; bottom: auto !important; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: 0px; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><ins id="aswift_8_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 92px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_8_anchor" style="border: none !important; height: 92px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_8" name="aswift_8" style="width: 746px !important; height: 92px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="746" height="92" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/zrt_lookup.html" data-google-container-id="a!9" data-google-query-id="CMDJ5I-TnPgCFZ08AQodV2AAug" data-load-complete="true"></iframe></ins></ins><ins class="ee" style="inset: 92px auto auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: absolute !important; vertical-align: baseline !important; visibility: visible !important; width: 100% !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; top: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; top: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowBottom" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,4 L0,22 A6,6 0 0,0 6,28 L50,28 A6,6 0 0,0 56,22 L56,10 A6,6 0 0,1 61,4 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowBottom&quot;);"></path><rect x="0" y="0" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="up" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="18" x2="28" y2="12"></line><line x1="28" y1="12" x2="34" y2="18"></line></g></svg></span></ins></ins></body><iframe id="google_esf" name="google_esf" src="./style_files/zrt_lookup(1).html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><ins id="aswift_7_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_7_anchor" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_7" name="aswift_7" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./style_files/zrt_lookup(2).html" data-google-container-id="a!8" data-google-query-id="CL_J5I-TnPgCFZ08AQodV2AAug" data-load-complete="true"></iframe></ins></ins></ins></html>
